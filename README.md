@@ -18,7 +18,25 @@ $ conda create -n mini-rag python=3.8
 ```bash
 $ conda activate mini-rag
 ```
-4) Install required packages using following command:
+## Installation
+
+### Install required packages using following command
+
 ```bash
 $ pip install -r requirements.txt
 ```
+### Setup environment variables
+```bash
+$ cp .env.example .env
+```
+Set your environments variables in the `.env` file. Like `OPEN_API_KEY` value.
+
+## Run the FastAPI server
+
+```bash
+$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+
+## POSTMAN collection
+
+Download the POSTMAN collection from [/assets/mini-rag-app.postman_collection.json](/assets/mini-rag-app.postman_collection.json)
